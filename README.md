@@ -20,3 +20,11 @@ Endpoint de salida GET /kpideclientes
 
 Endpoint de salida GET /listclientes
 -Lista de personas con todos los datos + fecha probable de muerte de cada una
+
+----------------------------------------------------------
+Configuración sdk Google Cloud 
+ - https://cloud.google.com/appengine/docs/standard/python/download
+ 
+comando despliegue en Google Cloud 
+ - mvn appengine:run
+ 
