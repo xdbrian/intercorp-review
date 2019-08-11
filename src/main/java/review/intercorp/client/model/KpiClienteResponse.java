@@ -13,5 +13,5 @@ import lombok.Setter;
 public class KpiClienteResponse {
 
     private Float average;
-    private Float standardDesviation;
+    private Double standardDesviation;
 }

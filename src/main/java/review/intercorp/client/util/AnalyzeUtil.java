@@ -1,8 +1,5 @@
 package review.intercorp.client.util;
 
-import review.intercorp.client.model.ClientResponse;
-
-import java.util.Date;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.IntStream;
@@ -14,7 +11,7 @@ public class AnalyzeUtil {
      */
     public static Function<List<Integer>, Float> average = lisItem -> {
 
-        if (lisItem.isEmpty() || lisItem.get(0) > 0) {
+        if (lisItem.isEmpty()) {
             return 0.f;
         }
 
@@ -25,9 +22,15 @@ public class AnalyzeUtil {
         return Float.valueOf((ageSum / lisItem.size()));
     };
 
-    public static Function<Date, Float> desviationStandard = date -> {
 
-
-        return 0.f;
+    /**
+     * Calcula desviación estandar.
+     */
+    public static Function<List<Integer>, Double> desviationStandard = listAge -> {
+        double sd;
+        Integer size = listAge.size();
+        double listAverage = listAge.stream().reduce(0, (x, y) -> x + y) / listAge.size();
+        sd = listAge.stream().mapToDouble(item -> ((item - listAverage) * (item - listAverage)) / (size - 1)).sum();
+        return Math.sqrt(sd);
     };
 }

@@ -2,6 +2,14 @@ spring:
   application:
     name: taskservice
 
+
+api:
+  client:
+    url: https://d6wn6bmjj722w.cloudfront.net
+
+
+
+
 #  datasource:
 #  driverClassName: com.mysql.jdbc.Driver
 #  url: "jdbc:mysql://google/review-intercorp?cloudSqlInstance=chatbottelegramp-1532637349644:us-central1:review-intercorp&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=review-intercorp"

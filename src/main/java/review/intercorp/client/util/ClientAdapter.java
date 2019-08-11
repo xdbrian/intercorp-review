@@ -15,6 +15,7 @@ public class ClientAdapter {
         clientResponse.setApellido(item.getApellido());
         clientResponse.setEdad(item.getEdad());
         clientResponse.setFechaacimiento(item.getFechaNacimiento());
+        clientResponse.setSexo(item.getSexo());
         return clientResponse;
     };
 

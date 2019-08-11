@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -28,11 +29,16 @@ public class ClientRequest implements Serializable {
     String apellido;
 
     @ApiModelProperty(notes = "Edad del cliente",example = "29",required = true)
+    @Min(1)
+    @Max(150)
     Integer edad;
 
     @ApiModelProperty(notes = "Fecha de nacimiento del cliente",example = "1990-01-01",required = true)
-    @Pattern(regexp = "dd/mm/yyyy")
-            @Max(value = 10)
+    @Pattern(regexp = "^\\d{4}([\\-/.])(0?[1-9]|1[1-2])\\1(3[01]|[12][0-9]|0?[1-9])$")
     String fechaNacimiento;
+
+    @ApiModelProperty(notes = "Fecha de nacimiento del cliente",example = "MASCULINO ó FEMENINO",required = true)
+    @Pattern(regexp = "(MASCULINO|FEMENINO)$")
+    String sexo;
 
 }
