@@ -45,7 +45,7 @@ public class ServiceClientImplTest {
     public void clientListAllOk() {
         serviceClient.list().stream().forEach(item -> {
             log.info(GSON.toJson(item));
-            assertTrue(item.getFechaProbableMuerte()>0);
+            assertTrue(item.getEdadProbableMuerte()>0);
         });
     }
 

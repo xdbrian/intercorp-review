@@ -21,5 +21,5 @@ public class ClientResponse implements Serializable {
     private String sexo;
     private Integer edad;
     private String fechaacimiento;
-    private Integer fechaProbableMuerte;//https://d6wn6bmjj722w.cloudfront.net/1.0/life-expectancy/total/male/Peru/1990-12-21/
+    private Integer edadProbableMuerte;//https://d6wn6bmjj722w.cloudfront.net/1.0/life-expectancy/total/male/Peru/1990-12-21/
 }

@@ -45,7 +45,7 @@ public class ServiceClientImpl implements ServiceClient {
                     item.getSexo(),
                     item.getFechaacimiento());
 
-            item.setFechaProbableMuerte(expectativeLifeResponse.getTotalLifeExpectancy().intValue());
+            item.setEdadProbableMuerte(expectativeLifeResponse.getTotalLifeExpectancy().intValue());
         });
         return memory;
     }
