@@ -17,6 +17,7 @@ public class ClientApplication {
 	}
 
 
+
 	@Value("${api.client.url}")
 	private String clientUrl;
 	@Bean
