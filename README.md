@@ -36,3 +36,8 @@ clonar repositorio
 Ejecutar
  - mvn spring-boot:run -Dserver.port=80
  
+Acceder a documentación 
+ - <url-base:port>/swagger-ui.html
+ 
+ 
+ 
