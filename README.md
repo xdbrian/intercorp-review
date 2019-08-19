@@ -22,9 +22,17 @@ Endpoint de salida GET /listclientes
 -Lista de personas con todos los datos + fecha probable de muerte de cada una
 
 ----------------------------------------------------------
-Configuración sdk Google Cloud 
- - https://cloud.google.com/appengine/docs/standard/python/download
+Configuración AZURE - virtual machine
+ - https://docs.microsoft.com/es-es/azure/virtual-machines/windows/quick-create-portal
  
-comando despliegue en Google Cloud 
- - mvn appengine:run
+Instalar JDK
+
+Instalar MVN
+
+Instalar Git
+
+clonar repositorio
+
+Ejecutar
+ - mvn spring-boot:run -Dserver.port=80
  
